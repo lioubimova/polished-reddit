@@ -1,1 +1,1 @@
-# polished-reddit
+# reddit
