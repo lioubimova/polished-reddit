@@ -4,6 +4,9 @@ Rails.application.routes.draw do
     member do
       post 'upvote'
     end
+    member do
+      post 'click'
+    end
   end
 
 

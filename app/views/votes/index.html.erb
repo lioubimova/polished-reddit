@@ -17,7 +17,7 @@
         <td><%= vote.link_id %></td>
         <td><%= pluralize(link.votes.count, "vote") %>
         <td><%= button_to '+1', upvote_link_path(link), method: :post %></td>
-        <td><%= pluralize(<link rel="stylesheet" href="/css/master.css" media="screen" title="no title" charset="utf-8">.votes.count, "vote") %></td>
+        <td><%= link_to link.title, click_link.URL %></td>
         <td><%= link_to 'Show URL', vote %></td>
         <td><%= link_to 'Edit', edit_vote_path(vote) %></td>
         <td><%= link_to 'Destroy', vote, method: :delete, data: { confirm: 'Are you sure?' } %></td>

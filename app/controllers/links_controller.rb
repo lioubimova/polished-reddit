@@ -19,7 +19,7 @@ end
   # GET /links/1
   # GET /links/1.json
   def show
-    
+
   end
 
   # GET /links/new
@@ -71,14 +71,26 @@ end
       format.json { head :no_content }
     end
   end
-
-  def upvote
-    @link = Link.find(params[:id])
-
-     @link.votes.create
-       redirect_to (links_path)
+def upvote
+  @link = Link.find(params[:id])
+  @link.votes.create
+  redirect_to (links_path)
 
 end
+
+  def click
+    @link = Link.find(params[:id])
+    @link.votes.create
+    redirect_to @link.URL
+  end
+
+
+end
+
+
+
+
+
 
 
   private
@@ -92,7 +104,5 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
-      params.require(:link).permit(:URL, :title)
+      params.require(:link).permit(:URL, :title, :summury)
     end
-
-  end
