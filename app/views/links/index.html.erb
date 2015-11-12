@@ -6,7 +6,9 @@
 
 <table class="table">
   <thead>
-
+<% if @new_user %>
+<%= button_to "Sign up", new_user_path, :class => "btn btn-default btn-lg", :method => "get" %>
+<%end%>
     <tr>
 
       <th>Votes</th>

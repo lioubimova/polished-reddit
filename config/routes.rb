@@ -8,9 +8,7 @@ Rails.application.routes.draw do
       get 'click'
     end
   end
-resources :comments do
-  resources :comments
-end
+
 resources :users, :except => [:destroy]
 resources :user_sessions, :only => [:new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
@@ -18,7 +16,7 @@ resources :user_sessions, :only => [:new, :create, :destroy]
 
   # You can have the root of your site routed with "root"
    root 'links#index'
-   
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
