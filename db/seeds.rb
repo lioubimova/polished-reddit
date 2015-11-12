@@ -9,6 +9,10 @@ links = Link.create!([{:title => "indiana flu death",:URL => "http://www.indysta
 
 ])
 
+users = User.create!([{:name => "Ivan",:username => "Terrible" ,:email => "Terrible@yahoo.com" ,:password => "tzar",:password_confirmation => "tzar"},
+{:name => "Fedor",:username => "gambler",:email => "Baden@gmail.com",:password => "casino",:password_confirmation => "casino"},
+{:name => "Leo",:username => "graf",:email => "Poljana@yahoo.com",:password => "writer",:password_confirmation => "writer"},
+{:name => "Olga",:username => "princess",:email => "Kiev@gmail.com",:password => "ruler",:password_confirmation => "ruler"}])
 
 
 

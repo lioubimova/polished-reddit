@@ -13,6 +13,7 @@ class LinksController < ApplicationController
 def index
 
   @link = Link.sort_by_votes
+  @new_user = true
 
 end
 
@@ -20,6 +21,7 @@ end
   # GET /links/1.json
   def show
 
+          @link = Link.find(params[:id])
   end
 
   # GET /links/new

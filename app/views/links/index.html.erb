@@ -6,6 +6,9 @@
 
 <table class="table">
   <thead>
+<% if @new_user %>
+<%= button_to "Sign up", new_user_path, :class => "btn btn-default btn-lg", :method => "get" %>
+<%end%>
     <tr>
 
       <th>Votes</th>
@@ -28,7 +31,7 @@
         <td><%= pluralize(link.votes.count, "vote") %></td>
         <td><%= button_to '+1', upvote_link_path(link), method: :post %></td>
 
-        <td><%= link_to link.title, click_link.URL %></td>
+        <td><%= link_to link.title, click_link_path(link) %></td>
 
         <td><%= link_to 'Show URL', link %></td>
         <td><%= link_to 'Edit', edit_link_path(link) %></td>
